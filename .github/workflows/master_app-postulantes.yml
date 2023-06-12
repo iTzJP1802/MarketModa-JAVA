@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: '${{ github.workspace }}/target'
+          path: '${{ github.workspace }}/src/main'
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,4 +50,4 @@ jobs:
           app-name: 'app-Postulantes'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B87C3D2EA0094AA29B70F21D5A65FA8D }}
-          package: '*.jar'
+          package: 'main'
