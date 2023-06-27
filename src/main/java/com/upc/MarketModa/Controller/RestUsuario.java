@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@CrossOrigin(origins = {"localhost:4200"}) //Datos del Cliente que lo invoca
+@CrossOrigin(origins = {"localhost:5000"}) //Datos del Cliente que lo invoca
 @RequestMapping("/api")
 public class RestUsuario {
 
@@ -57,13 +57,13 @@ public class RestUsuario {
     }
 
     @PutMapping("/usuario/{Id}")
-    public ResponseEntity<UsuarioDTO> actualizar(@PathVariable(value = "Id") Long ggId,
+    public ResponseEntity<UsuarioDTO> actualizar(@PathVariable(value = "Id") Long Id,
                                                  @RequestBody UsuarioDTO usuarioDTO){
         Usuario usuario;
         Usuario usuarioActualizado;
         try {
             usuario = convertToEntity(usuarioDTO);
-            usuarioActualizado = negocioUsuario.actualizar(ggId, usuario);
+            usuarioActualizado = negocioUsuario.actualizar(Id, usuario);
             usuarioDTO = convertToDTO(usuarioActualizado);
         }catch (Exception e){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,"No fue posible actualizar el usuario");

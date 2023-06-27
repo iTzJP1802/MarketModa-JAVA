@@ -6,7 +6,7 @@ import javax.persistence.Id;
 @Entity
 public class Comentarios {
     @Id
-    private String nombre;
+    public String nombre;
     private String comentario;
     private String email;
 

@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class ComentariosDTO {
+public class PrendaDTO {
 
-    public String nombre;
-    private String comentario;
-    private String email;
+    public long id;
+    private String path;
 }
