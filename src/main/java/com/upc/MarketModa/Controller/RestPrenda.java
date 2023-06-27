@@ -1,9 +1,7 @@
 package com.upc.MarketModa.Controller;
 
 import com.upc.MarketModa.DTOS.PrendaDTO;
-import com.upc.MarketModa.DTOS.UsuarioDTO;
 import com.upc.MarketModa.Entidades.Prenda;
-import com.upc.MarketModa.Entidades.Usuario;
 import com.upc.MarketModa.Negocio.NegocioPrenda;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
