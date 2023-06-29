@@ -43,6 +43,9 @@ public class NegocioUsuario {
     public List<Usuario> obtenerReportexId(Long Id){
         return repositorioUsuario.findUsuarioById(Id);
     }
+    public List<Usuario> IniciarSesion(String emailUsuario, String passwordUsuario){
+        return repositorioUsuario.findUsuarioByEmailUsuarioAndAndPasswordUsuario(emailUsuario,passwordUsuario);
+    }
     private List<UsuarioDTO> convertToLisDto(List<Usuario> list){
         return list.stream()
                 .map(this::convertToDto)

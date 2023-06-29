@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface RepositorioUsuario extends JpaRepository<Usuario,Long> {
     List<Usuario> findUsuarioById(Long Id);
+    List<Usuario> findUsuarioByEmailUsuarioAndAndPasswordUsuario(String emailUsuario,String passwordUsuario);
 }

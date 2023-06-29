@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@CrossOrigin(origins = {"localhost:5000"}) //Datos del Cliente que lo invoca
+@CrossOrigin(origins = {"localhost:8080"}) //Datos del Cliente que lo invoca
 @RequestMapping("/api")
 public class RestPrenda {
 
