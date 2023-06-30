@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@CrossOrigin(origins = {"localhost:8080"}) //Datos del Cliente que lo invoca
+@CrossOrigin(origins = {"http://localhost:4200"}) //Datos del Cliente que lo invoca
 @RequestMapping("/api")
 public class RestUsuario {
 
@@ -57,7 +57,7 @@ public class RestUsuario {
     }
 
     @GetMapping("/IniciarSesion/{emailUsuario}/{passwordUsuario}") //4.-
-    public List<UsuarioDTO> IniciarSesion(@PathVariable(value = "emailUsuario") String emailUsuario, @PathVariable(value="passwordUsuario") String passwordUsuario){
+    public List<UsuarioDTO> iniciarSesion(@PathVariable(value = "emailUsuario") String emailUsuario, @PathVariable(value="passwordUsuario") String passwordUsuario){
         List<UsuarioDTO> usuarioDTOS;
         try {
             usuarioDTOS = convertToLisDto(negocioUsuario.IniciarSesion(emailUsuario,passwordUsuario));
